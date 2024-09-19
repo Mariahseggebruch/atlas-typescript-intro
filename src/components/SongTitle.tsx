@@ -1,9 +1,19 @@
-export default function SongTitle() {
-    return (
-      <div className="text-align-left">
-        <h1 className="text-3xl font-bold">Lip Gloss</h1>
-        <p className="text-lg">Lil Mama</p>
-      </div>
-    );
+// Song Title Component
+
+type SongTitleProps = {
+  title: string;
+  artist: string;
 };
 
+function SongTitle({ title, artist }: SongTitleProps) {
+  return (
+    <div>
+      <h2 className="leading-8 text-2xl font-bold mb-2 text-vista-blue-900">
+        {title}
+      </h2>
+      <p className="mb-4 text-vista-blue-900">{artist}</p>
+    </div>
+  );
+}
+
+export default SongTitle;
