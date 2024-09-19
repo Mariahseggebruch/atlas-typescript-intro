@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { SpeakerXMarkIcon, SpeakerWaveIcon } from '@heroicons/react/24/solid';
 
-const VolumeControl = () => {
+interface VolumeControlsProps {
+  onVolumeChange: (volume: number) => void;
+}
+
+const VolumeControl: React.FC<VolumeControlsProps> = () => {
   const [volume, setVolume] = useState(50); // Initial volume
 
-  const handleVolumeChange = (event) => {
+  const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setVolume(parseInt(event.target.value, 10));
   };
 
