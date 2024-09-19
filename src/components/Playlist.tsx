@@ -13,7 +13,7 @@ const Playlist: React.FC<PlaylistProps> = ({ songs, currentlyPlaying, onSongClic
       <h2 className="mb-4 text-lg font-semibold">Playlist</h2>
       {songs.map((song, index) => (
         <PlayListItem
-          key={song.id || song.title} // Use id if available, otherwise use title
+          key={song.id || song.title}
           title={song.title}
           artist={song.artist}
           length={song.length}
@@ -24,7 +24,5 @@ const Playlist: React.FC<PlaylistProps> = ({ songs, currentlyPlaying, onSongClic
     </div>
   );
 };
-
-export default Playlist;
 
 export default Playlist;
